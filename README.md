@@ -38,12 +38,6 @@ O **ShopLy** é um e-commerce desenvolvido com **React.js**, simulando uma loja 
 git clone https://github.com/seu-usuario/shoply.git
 ```
 
-### Acesse a pasta do projeto
-
-```bash
-cd shoply
-```
-
 ### Instale as dependências
 
 ```bash
