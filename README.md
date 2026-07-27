@@ -1,16 +1,86 @@
-# React + Vite
+# 🛍️ ShopLy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **ShopLy** é um e-commerce desenvolvido com **React.js**, simulando uma loja virtual que oferece produtos de diversas categorias. O projeto permite navegar pelos produtos, visualizar detalhes, adicionar itens ao carrinho e finalizar uma compra de forma simples, proporcionando uma experiência semelhante à de uma loja online.
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Preview](./src/assets/previewEcommerce.png)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+🛒 Listagem de produtos de diferentes categorias  
+🔍 Visualização de detalhes dos produtos  
+➕ Adicionar produtos ao carrinho  
+➖ Aumentar e diminuir a quantidade de itens  
+🗑️ Remover produtos do carrinho  
+💰 Cálculo automático do valor total da compra  
+📱 Interface moderna e responsiva
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
+
+---
+
+## ⚙️ Como executar o projeto
+
+### Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/shoply.git
+```
+
+### Acesse a pasta do projeto
+
+```bash
+cd shoply
+```
+
+### Instale as dependências
+
+```bash
+npm install
+```
+
+### Execute o projeto
+
+```bash
+npm run dev
+```
+
+A aplicação estará disponível em:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📖 Aprendizados
+
+Durante o desenvolvimento deste projeto foram praticados conceitos como:
+
+- Componentização com React
+- Hooks (useState)
+- Gerenciamento de estado
+- Manipulação de eventos
+- Renderização dinâmica de listas
+- Props entre componentes
+- Organização de componentes
+- Carrinho de compras
+- Estilização com CSS
+- Estruturação de um e-commerce
+
+---
+
+## 👩‍💻 Autora
+
+Desenvolvido por **Gabriela Romano**.
