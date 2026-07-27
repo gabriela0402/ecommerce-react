@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Relógio Elegante",
+    "price": 50.99,
+    "image": "https://picsum.photos/id/175/400/400"
+  },
+  {
+    "id": 2,
+    "name": "Câmera Vintage",
+    "price": 85.5,
+    "image": "https://picsum.photos/id/250/400/400"
+  },
+  {
+    "id": 3,
+    "name": "Fones de Ouvido",
+    "price": 35.99,
+    "image": "https://picsum.photos/id/180/400/400"
+  },
+  {
+    "id": 4,
+    "name": "Tênis de Corrida",
+    "price": 120.0,
+    "image": "https://picsum.photos/id/21/400/400"
+  },
+  {
+    "id": 5,
+    "name": "Smartphone",
+    "price": 299.99,
+    "image": "https://picsum.photos/id/119/400/400"
+  },
+  {
+    "id": 6,
+    "name": "Livro de Aventura",
+    "price": 19.99,
+    "image": "https://picsum.photos/id/24/400/400"
+  }
+]

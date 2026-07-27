@@ -1,0 +1,389 @@
+/* ==========================================================================
+   Shoply — Design Tokens
+   Cream:      #FFF8F0  (fundo base)
+   Charcoal:   #2B2320  (texto principal)
+   Orange:     #FF6B35  (cor de marca / ações primárias)
+   Deep Rust:  #C6431A  (hover / ênfase)
+   Gold:       #FFB84D  (badges / destaques)
+   White:      #FFFFFF  (cards)
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f0;
+  color: #2b2320;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Manchas decorativas quentes ao fundo — a assinatura visual do Shoply */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::before {
+  width: 420px;
+  height: 420px;
+  top: -140px;
+  right: -120px;
+  background: radial-gradient(circle, #ffb84d 0%, #ff6b35 70%);
+}
+
+body::after {
+  width: 320px;
+  height: 320px;
+  bottom: -100px;
+  left: -100px;
+  background: radial-gradient(circle, #ff6b35 0%, #c6431a 70%);
+  opacity: 0.2;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #2b2320;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+nav {
+  background-color: #2b2320;
+  color: #fff8f0;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(43, 35, 32, 0.15);
+}
+
+nav a {
+  color: #f4ede4;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ff6b35;
+  border-color: #ff6b35;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff8f0;
+  margin-right: auto;
+}
+
+.brand-logo svg {
+  color: #ff6b35;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.container h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.container > h1::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffb84d);
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+/* ==========================================================================
+   Product Card
+   ========================================================================== */
+
+.product {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(43, 35, 32, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #f1e7db;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.product:hover {
+  box-shadow: 0 14px 28px rgba(255, 107, 53, 0.18);
+  transform: translateY(-4px);
+  border-color: #ffd9b8;
+}
+
+.product img {
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  align-self: center;
+  padding: 8px 0;
+}
+
+.product h3 {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.product p {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 4px;
+  background-color: #fff1e4;
+  color: #c6431a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Cart Item
+   ========================================================================== */
+
+.cart-item {
+  background-color: #ffffff;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(43, 35, 32, 0.05);
+  border: 1px solid #f1e7db;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.1);
+}
+
+.cart-item h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.cart-item p {
+  color: #c6431a;
+  font-weight: 700;
+  margin: 4px 0 0 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========================================================================
+   Buttons & Inputs
+   ========================================================================== */
+
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cart-buttons select,
+.cart-item input[type="text"] {
+  padding: 9px 12px;
+  border: 1.5px solid #f1e0cc;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  background-color: #fffaf3;
+  color: #2b2320;
+  width: 64px;
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.cart-buttons select:focus,
+.cart-item input[type="text"]:focus {
+  outline: none;
+  border-color: #ff6b35;
+}
+
+.product-buttoon,
+.cart-item button,
+.total button,
+.thank-you-page button {
+  background: linear-gradient(135deg, #ff6b35, #ff8c5a);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 22px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.28);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.product-buttoon:hover,
+.cart-item button:hover,
+.total button:hover,
+.thank-you-page button:hover {
+  background: linear-gradient(135deg, #c6431a, #ff6b35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 107, 53, 0.35);
+}
+
+.cart-item button {
+  background: #ffffff;
+  color: #c6431a;
+  border: 1.5px solid #ffd9b8;
+  box-shadow: none;
+}
+
+.cart-item button:hover {
+  background: #fff1e4;
+  color: #c6431a;
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   Total / Checkout
+   ========================================================================== */
+
+.total {
+  text-align: right;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 2px dashed #f1d9bd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.total p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #2b2320;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Thank You Page
+   ========================================================================== */
+
+.thank-you-page {
+  max-width: 560px;
+  margin: 64px auto;
+  background-color: #ffffff;
+  padding: 44px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(43, 35, 32, 0.08);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border: 1px solid #f1e7db;
+}
+
+.thank-you-page .success-icon {
+  color: #ff6b35;
+  margin-bottom: 8px;
+}
+
+.thank-you-page h1 {
+  margin-bottom: 6px;
+}
+
+.thank-you-page .subtitle {
+  color: #8a7d70;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+.thank-you-page ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 8px;
+  border-top: 1px solid #f1e7db;
+}
+
+.thank-you-page li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 4px;
+  border-bottom: 1px solid #f1e7db;
+  font-size: 15px;
+}
+
+.thank-you-page p {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin: 24px 0;
+}
+
+.thank-you-page button {
+  margin: 0 auto;
+}
