@@ -2,6 +2,12 @@
 
 O **ShopLy** é um e-commerce desenvolvido com **React.js**, simulando uma loja virtual que oferece produtos de diversas categorias. O projeto permite navegar pelos produtos, visualizar detalhes, adicionar itens ao carrinho e finalizar uma compra de forma simples, proporcionando uma experiência semelhante à de uma loja online.
 
+## 📸 Preview
+
+![Preview](./src/assets/previewEcommerce.png)
+
+---
+
 ## 🚀 Funcionalidades
 
 🛒 Listagem de produtos de diferentes categorias  
